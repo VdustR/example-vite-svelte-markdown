@@ -1,12 +1,10 @@
 // @ts-check
 
 import { svelte } from "@sveltejs/vite-plugin-svelte";
-import cheerio from "cheerio";
+import { unescape } from "html-escaper";
 import { mdsvex } from "mdsvex";
 import shiki from "shiki";
 import { defineConfig } from "vite";
-
-const $ = cheerio.load("<div />", {}, false);
 
 /**
  * Prevent removing leading and tailing spaces.
@@ -16,29 +14,42 @@ const $ = cheerio.load("<div />", {}, false);
 function saveSvelteHtmlText(html) {
   return html.replace(/>( *[^<\n\r]+ *)</g, (match) => {
     const text = match.substring(1, match.length - 1);
-    const unescapeText = $("<div />").html(text).text();
+    /**
+     * We don't need escape text here but we have to transform it into a svelte
+     * string.
+     *
+     * For example:
+     *   <div> &lt;div&gt; </div>
+     *   should be transformed to
+     *   <div>{" <div> "}</div>
+     */
+    const unescapeText = unescape(text);
     return '>{"' + unescapeText.replace(/"/g, '\\"') + '"}<';
   });
 }
 
-console.log(shiki.BUNDLED_LANGUAGES);
-
 const processorGroup = mdsvex({
   highlight: {
+    /**
+     * You can use the highlighter you prefer.
+     * We use shiki for example.
+     */
     highlighter: async (code, lang) => {
       /**
-       * only highlight if the lang is supported
+       * Only highlight if the lang is supported.
        */
       if (
         shiki.BUNDLED_LANGUAGES.some(
           ({ id, aliases }) => id === lang || aliases?.includes(lang)
         )
       ) {
+        // You can choose the highlighter you want to use.
         const highlighter = await shiki.getHighlighter({
           theme: "dracula",
         });
         return saveSvelteHtmlText(highlighter.codeToHtml(code, { lang }));
       } else {
+        // If the lang is not supported, just return the code.
         return "<pre><code>{`" + code.replace(/`/g, "\\`") + "`}</code></pre>";
       }
     },

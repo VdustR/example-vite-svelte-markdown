@@ -47,7 +47,7 @@ export default defineConfig({
 
 Here the example for highlight with `shiki`. I got some problems and resolved them with workarounds.
 
-Please check [`vite.config.js`](./vite.config.js) for more information.
+Please check [`vite.config.js`](./vite.config.js) for more information. It might be the **MOST IMPORTANT** section in this example.
 
 ### `.svx` Extension Name Association
 
