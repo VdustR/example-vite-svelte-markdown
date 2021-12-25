@@ -13,9 +13,8 @@ Demo: <https://vdustr.github.io/example-vite-svelte-markdown/>
 - `vite`@`^2.7.2` (for example)
 - `svelte`@`^3.44.0`
 - `mdsvex`@`^0.9.8`
-- `cheerio`@`^1.0.0-rc.10` (optional, for highlight)
-- `escape-html`@`^1.0.3` (optional, for highlight)
 - `shiki`@`^0.9.15` (optional, for highlight)
+- `html-escaper`@`^3.0.3` (optional, for highlight)
 
 ## Steps
 
