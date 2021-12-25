@@ -1,0 +1,29 @@
+{
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/objects",
+    ".vscode",
+    ".vscode-insiders",
+    "pnpm-lcok.yaml"
+  ],
+  "cSpell.words": [
+    "boinger",
+    "mdsvex",
+    "peaceiris",
+    "pnpm",
+    "preprocessors",
+    "shiki",
+    "sveltejs",
+    "svex",
+    "typecheck",
+    "vite"
+  ],
+  "files.associations": {
+    "*.svx": "markdown"
+  }
+}
