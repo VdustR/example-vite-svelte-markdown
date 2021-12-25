@@ -8,7 +8,7 @@ Demo: <https://vdustr.github.io/example-vite-svelte-markdown/>
 
 ## Dependencies
 
-- `vscode`@`1.63.2` (for example. The editor for better DX.)
+- `vscode`@`^1.63.2` (for example. The editor for better DX.)
 - `pnpm`@`^6.24.2` (for example. Replace it with any other package manager you like)
 - `vite`@`^2.7.2` (for example)
 - `svelte`@`^3.44.0`
