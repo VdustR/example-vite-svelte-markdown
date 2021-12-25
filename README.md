@@ -4,6 +4,8 @@ This is an example for importing Markdown files as Svelte components.
 
 We'll use [`MDsveX`](https://github.com/pngwn/MDsveX) as our markdown pre-processor. Although there are some issues, it works pretty great for me with some workarounds.
 
+Demo: <https://vdustr.github.io/example-vite-svelte-markdown/>
+
 ## Dependencies
 
 - `vscode`@`1.63.2` (for example. The editor for better DX.)
@@ -29,7 +31,7 @@ pnpm create vite
 
 ### Setup MDsveX
 
-You can append this into `vite.config.json` simply for basic functions:
+You can append this into `vite.config.js` simply for basic functions:
 
 ```js
 export default defineConfig({
@@ -43,7 +45,9 @@ export default defineConfig({
 });
 ```
 
-Here the example for highlight with `shiki`. I got some problems and resolved them with workarounds. Please check [`vite.config.json`](./vite.config.json).
+Here the example for highlight with `shiki`. I got some problems and resolved them with workarounds.
+
+Please check [`vite.config.js`](./vite.config.js) for more information.
 
 ### `.svx` Extension Name Association
 
