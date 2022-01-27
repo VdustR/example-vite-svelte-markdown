@@ -14,7 +14,6 @@ Demo: <https://vdustr.github.io/example-vite-svelte-markdown/>
 - `svelte`@`^3.44.0`
 - `mdsvex`@`^0.9.8`
 - `shiki`@`^0.9.15` (optional, for highlight)
-- `html-escaper`@`^3.0.3` (optional, for highlight)
 
 ## Steps
 

@@ -3,7 +3,6 @@ lockfileVersion: 5.3
 specifiers:
   '@sveltejs/vite-plugin-svelte': ^1.0.0-next.30
   '@tsconfig/svelte': ^2.0.1
-  html-escaper: ^3.0.3
   mdsvex: ^0.9.8
   shiki: ^0.9.15
   svelte: ^3.44.0
@@ -16,7 +15,6 @@ specifiers:
 devDependencies:
   '@sveltejs/vite-plugin-svelte': 1.0.0-next.32_svelte@3.44.3+vite@2.7.6
   '@tsconfig/svelte': 2.0.1
-  html-escaper: 3.0.3
   mdsvex: 0.9.8_svelte@3.44.3
   shiki: 0.9.15
   svelte: 3.44.3
@@ -444,10 +442,6 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
-    dev: true
-
-  /html-escaper/3.0.3:
-    resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
     dev: true
 
   /import-fresh/3.3.0:
