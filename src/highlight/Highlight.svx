@@ -21,6 +21,7 @@ ReactDOM.render(<h1>Hello, world!</h1>, document.getElementById("root"));
 ```vue
 <script>
 var app = new Vue({ el: "#app", data: { message: "Hello Vue!" } });
+console.log("escape \"$`'{};");
 </script>
 ```
 
@@ -39,5 +40,5 @@ var app = new Vue({ el: "#app", data: { message: "Hello Vue!" } });
 ```
 
 ```
-escape "`'{};
+escape "$`'{};
 ```

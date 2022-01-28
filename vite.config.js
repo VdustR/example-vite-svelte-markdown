@@ -1,6 +1,7 @@
 // @ts-check
 
 import { svelte } from "@sveltejs/vite-plugin-svelte";
+import { escape } from "html-escaper";
 import { mdsvex } from "mdsvex";
 import shiki from "shiki";
 import { defineConfig } from "vite";
@@ -34,7 +35,7 @@ const processorGroup = mdsvex({
         return htmlToSvelte(highlighter.codeToHtml(code, { lang }));
       } else {
         // If the lang is not supported, just return the code.
-        return "<pre><code>{`" + code.replace(/`/g, "\\`") + "`}</code></pre>";
+        return htmlToSvelte(`<pre><code>${escape(code)}</code></pre>`);
       }
     },
   },
